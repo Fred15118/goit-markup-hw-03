@@ -53,7 +53,6 @@ a{
 }
 /*------------------------Header---------------------------*/
 .header{
-    padding: 24px 0;
     border-bottom: 1px solid #e7e9fc;
 }
 .header .container{
@@ -70,6 +69,7 @@ a{
     color: #4D5AE5;
 
     margin-right: 76px;
+    padding: 24px 0;
 }
 
 .logo__span{
