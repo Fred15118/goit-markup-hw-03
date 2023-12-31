@@ -4,16 +4,63 @@ body{
     color: #434455;
     background-color: #fff;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+ul,ol{
+    margin: 0;
+    padding-left: 0;
+}
+
+img{
+    display: block;
+}
 
 a{
     text-decoration: none;
     color: currentColor;
 }
 
-.list{
+.container{
+    max-width: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.list {
     list-style-type: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/*------------------------Header---------------------------*/
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 24px 0;
+}
 .logo{
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -28,11 +75,19 @@ a{
     color: #2e2f42;
 }
 
+.header__nav{
+    display: flex;
+    gap: 76px;
+}
+
 .nav__list{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
+
+    display: flex;
+    gap: 40px;
 }
 
 .nav__item{
@@ -56,6 +111,11 @@ a{
     font-style: normal;
 }
 
+.feedback__list{
+    display: flex;
+    gap: 40px;
+}
+
 .feedback__link{
     color: currentColor;
 }
@@ -65,8 +125,19 @@ a{
     color: #404bbf;
 }
 
+/*-------------------------Hero-------------------*/
 .hero{
     background-color: #2E2F42;
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 188px;
+    padding-bottom: 188px;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero__title{
@@ -76,6 +147,9 @@ a{
     letter-spacing: 1.12px;
     color: #fff;
     text-align: center;
+
+    width: 496px;
+    margin-bottom: 48px;
 }
 
 .hero__button{
@@ -86,19 +160,28 @@ a{
     line-height: 1.5;
     letter-spacing: 0.64px;
     cursor: pointer;
+
+    padding: 16px 32px;
+    width: 175px;
 }
 
 .hero__button:hover,
 .hero__button:focus{
     background-color: #404bbf;
 }
-
+/*------------------------Values---------------------------*/
+.values .container{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .values__subtitle{
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
     color: #2e2f42;
+
+    margin-bottom: 8px;
 }
 
 .values__text{
@@ -108,8 +191,18 @@ a{
     color: ;
 }
 
+.values__list{
+    display: flex;
+    gap: 24px;
+}
+/*------------------------Team---------------------------*/
 .team{
     background-color: #F4F4FD;
+}
+
+.team .container{
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .team__title{
@@ -120,10 +213,23 @@ a{
     text-transform: capitalize;
     text-align: center;
     color: #2e2f42;
+
+    margin-bottom: 72px;
+}
+
+.team__list{
+    display: flex;
+    gap: 24px;
 }
 
 .team__card{
     background-color: #fff;
+    flex-basis: calc((100%-84px)/4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 
 .team__subtitle{
@@ -132,6 +238,9 @@ a{
     line-height: 1.2;
     letter-spacing: 0.4px;
     color: #2e2f42;
+
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .team__text{
@@ -139,18 +248,37 @@ a{
     line-height: 24px;
     letter-spacing: 0.32px;
     color: #434455;
-}
 
+    margin-bottom: 32px;
+}
+/*------------------------Portfolio---------------------------*/
+.portfolio{
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
 .portfolio__title{
     font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.72px;
     color: #2e2f42;
+
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+.portfolio__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
 .portfolio__card{
     border: 1px solid #e7e9fc;
+    flex-basis: calc((100%-54px)/3);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
 }
 
 .portfolio__subtitle{
@@ -159,6 +287,9 @@ a{
     line-height: 1.2;
     letter-spacing: 0.4px;
     color: #2e2f42;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
 }
 
 .portfolio__text {
@@ -166,17 +297,21 @@ a{
     line-height: 24px;
     letter-spacing: 0.32px;
     color: #434455;
+    padding-left: 16px;
 }
-
+/*------------------------Footer---------------------------*/
 footer{
     background-color: #2E2F42;
     color: #F4F4FD;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer__text{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    margin-top: 16px;
 }
 .footer__span{
     color: #F4F4FD;
