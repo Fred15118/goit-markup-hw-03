@@ -53,6 +53,7 @@ a{
 }
 /*------------------------Header---------------------------*/
 .header{
+    padding: 24px 0;
     border-bottom: 1px solid #e7e9fc;
 }
 .header .container{
@@ -92,7 +93,6 @@ a{
 
 .nav__item{
     color: #2e2f42;
-    padding: 24px 0;
 }
 
 .nav__link:hover,
@@ -115,10 +115,6 @@ a{
 .feedback__list{
     display: flex;
     gap: 40px;
-}
-
-.feedback__item{
-    padding: 24px 0;
 }
 
 .feedback__link{
@@ -288,9 +284,9 @@ a{
 }
 
 .portfolio__card{
-    width: calc((100%-48px)/3);
     display: flex;
     flex-direction: column;
+    width: calc((100% - 48px) / 3);
     padding-bottom: 32px;
 }
 
